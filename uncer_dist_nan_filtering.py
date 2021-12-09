@@ -18,12 +18,12 @@ i_sig = 4
 i_uncer = 5
 i_dist = 6
 
-dir_ = 'C:/DATA/TMP'
-d10_D5_p30_reg02 = os.path.join(dir_, 'd10_D5_p30_reg02.sbf')
-d5_p30_uncer_nan = os.path.join(dir_, 'd10_D5_p30_reg02_uncer_nan.sbf')
-d5_p30_dist_nan = os.path.join(dir_, 'd10_D5_p30_reg02_dist_nan.sbf')
+dir_ = 'C:/DATA/test_double_intercept'
+D10_d5_p30_reg02 = os.path.join(dir_, 'D10_d5_p30_reg02.sbf')
+d5_p30_uncer_nan = os.path.join(dir_, 'D10_d5_p30_reg02_uncer_nan.sbf')
+d5_p30_dist_nan = os.path.join(dir_, 'D10_d5_p30_reg02_dist_nan.sbf')
 
-pc, sf, config = cc.read_sbf(d10_D5_p30_reg02, verbose=False)
+pc, sf, config = cc.read_sbf(D10_d5_p30_reg02, verbose=False)
 
 uncer_nan = np.where(np.isnan(sf[:, i_uncer]))[0]
 dist_nan = np.where(np.isnan(sf[:, i_dist]))[0]
